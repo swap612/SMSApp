@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Platform } from 'ionic-angular';
 import { SmsListProvider } from '../../providers/sms-list/sms-list';
+import { SmsDetailedPage } from '../sms-detailed/sms-detailed';
 
 declare var SMS:any;
 
@@ -67,5 +68,11 @@ export class HomePage {
 
     //  });
   }
+  goToSmsDetailPage(message){
+    console.log("onclick sms detailed page");
 
+    this.navCtrl.push(SmsDetailedPage,{  
+        messageObj: message  
+    });
+  }
 }

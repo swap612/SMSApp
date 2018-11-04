@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SmsListProvider } from '../../providers/sms-list/sms-list';
+import { SmsDetailedPage } from '../sms-detailed/sms-detailed';
 
 /**
  * Generated class for the TransactionsPage page.
@@ -24,5 +25,9 @@ export class TransactionsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TransactionsPage');
   }
-
+  goToSmsDetailPage(){
+    console.log("Transaction onclick sms detailed page");
+    //this.navCtrl.setRoot(SmsDetailedPage);
+    this.navCtrl.push(SmsDetailedPage);
+  }
 }

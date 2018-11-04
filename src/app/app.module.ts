@@ -12,24 +12,30 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TransactionsPage } from '../pages/transactions/transactions';
 import { SmsListProvider } from '../providers/sms-list/sms-list';
 import { HttpClientModule } from '@angular/common/http'; 
+import { SmsDetailedPage } from '../pages/sms-detailed/sms-detailed';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     TabsPage,
-    TransactionsPage
+    TransactionsPage,
+    SmsDetailedPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      //to hide the tabs on sms detailed page
+      tabsHideOnSubPages: true,
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage, 
     TabsPage,
-    TransactionsPage
+    TransactionsPage,
+    SmsDetailedPage
   ],
   providers: [
     AndroidPermissions,

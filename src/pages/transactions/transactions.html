@@ -11,7 +11,7 @@
 <ion-content padding>
   This is a transactions message List.
   <ion-list>
-    <ion-item *ngFor="let x of transMsg">
+    <ion-item *ngFor="let x of transMsg" (click)="goToSmsDetailPage()">
       <!-- <ion-avatar item-start>
         <button ion-button color="danger" round>{{x.address}}</button>
       </ion-avatar> -->
