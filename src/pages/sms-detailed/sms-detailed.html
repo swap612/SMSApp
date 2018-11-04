@@ -1,8 +1,8 @@
 
 <ion-header>
 
-  <ion-navbar>
-      <ion-title>SMS details</ion-title>
+  <ion-navbar color="primary">
+      <ion-title>{{msg_address}}</ion-title>
 
     <!-- <ion-title>{{msg_detail.address}}</ion-title> -->
   </ion-navbar>
@@ -11,7 +11,9 @@
 
 
 <ion-content padding>
-  <P>message body</P>
-  <!-- <p>{{msg_detail.body}}</p> -->
-
+  <ion-card>
+      <ion-card-content background-color="light">
+         {{msg_body}}
+      </ion-card-content>  <!-- <p>{{msg_detail.body}}</p> -->
+  </ion-card>
 </ion-content>

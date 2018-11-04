@@ -68,11 +68,14 @@ export class HomePage {
 
     //  });
   }
-  goToSmsDetailPage(message){
+
+  //Display message in detail
+  goToSmsDetailPage(addr, body){
     console.log("onclick sms detailed page");
 
     this.navCtrl.push(SmsDetailedPage,{  
-        messageObj: message  
+      messageAddr: addr,
+      messageBody: body
     });
   }
 }

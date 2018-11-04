@@ -16,8 +16,8 @@ import { SmsDetailedPage } from '../sms-detailed/sms-detailed';
   templateUrl: 'transactions.html',
 })
 export class TransactionsPage {
-  transMsg:any=[]
-  constructor(public navCtrl: NavController, public navParams: NavParams, public smsservice:SmsListProvider) {
+  transMsg: any = []
+  constructor(public navCtrl: NavController, public navParams: NavParams, public smsservice: SmsListProvider) {
     console.log('const TransactionsPage');
     this.transMsg = smsservice.transactionMsg;
   }
@@ -25,9 +25,14 @@ export class TransactionsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TransactionsPage');
   }
-  goToSmsDetailPage(){
-    console.log("Transaction onclick sms detailed page");
-    //this.navCtrl.setRoot(SmsDetailedPage);
-    this.navCtrl.push(SmsDetailedPage);
+
+  //Display message in detail
+  goToSmsDetailPage(addr, body) {
+    console.log("onclick sms detailed page");
+
+    this.navCtrl.push(SmsDetailedPage, {
+      messageAddr: addr,
+      messageBody: body
+    });
   }
 }

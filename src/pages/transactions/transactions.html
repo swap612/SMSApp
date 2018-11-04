@@ -1,8 +1,8 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>transactions</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Transactional messages</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,7 +11,7 @@
 <ion-content padding>
   This is a transactions message List.
   <ion-list>
-    <ion-item *ngFor="let x of transMsg" (click)="goToSmsDetailPage()">
+    <ion-item *ngFor="let x of transMsg" (click)="goToSmsDetailPage(x.address,x.body)">
       <!-- <ion-avatar item-start>
         <button ion-button color="danger" round>{{x.address}}</button>
       </ion-avatar> -->

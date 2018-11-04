@@ -14,12 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sms-detailed.html',
 })
 export class SmsDetailedPage {
-  msg_detail:any=[];
+  msg_address:any;
+  msg_body:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.msg_detail = navParams.get('messageObj');
-    console.log(this.msg_detail.addr);
-    console.log(this.msg_detail.body);
-    
+    console.log("Inside sms detail()")
+    this.msg_address = navParams.get('messageAddr');
+    this.msg_body = navParams.get('messageBody');
+    console.log("Message detaisl are"+ this.msg_address + "Body:"+ this.msg_body)
     //  let msg_addr = navParams.get('addr');
     //  let msg_body = navParams.get('body');
   }
